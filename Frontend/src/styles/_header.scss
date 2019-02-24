@@ -1,0 +1,20 @@
+.header{
+  display: block;
+  background: $primary-color;
+  padding: 10px 20px;
+  clear: both;
+  overflow: hidden;
+  box-shadow: 0 1px 1px 1px $header-shadow;
+  .header-content{
+    color:$text-color;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    .brand{
+      color: $text-color;
+      font-size: 22px;
+    }
+  }
+
+}
+

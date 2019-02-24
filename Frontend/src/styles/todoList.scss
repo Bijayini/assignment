@@ -1,0 +1,96 @@
+@import "variables";
+@import "globalStyles";
+@import "header";
+@import "_modal";
+@import '_button';
+@import "_loader";
+
+.main-content{
+  padding:20px;
+  .list-wrap{
+    @media screen and (min-width: $breakpoints-desktop)  {
+      display:flex;
+      flex-direction:row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  .list{
+    border-radius: 4px;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
+    padding:14px;
+    margin-bottom:20px;
+    position: relative;
+    width:100%;
+
+    @media screen and (min-width: $breakpoints-desktop)  {
+      width:48%;
+    }
+
+    .list-header{
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+
+      .heading{
+        text-transform: capitalize;
+      }
+
+      .status{
+        padding: 4px 10px;
+        border-radius: 10px;
+        border:1px solid $in-progress-status;
+        line-height: 1;
+        font-size: 12px;
+        color:$in-progress-status;
+        text-transform: capitalize;
+
+        &.urgent{
+          border-color: $urgent-status;
+          color: $urgent-status;
+        }
+
+        &.completed{
+          border-color: $completed-status;
+          color: $completed-status;
+        }
+      }
+    }
+
+    .description{
+      font-size: 14px;
+      line-height: 1.3;
+      margin: 10px 0 0;
+    }
+
+    .hover-effect{
+      display: none;
+      background: $popover-background;
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left:0;
+      right:0;
+      border-radius: 4px;
+    }
+
+    &:hover, &:focus{
+      .hover-effect{
+        display: block;
+      }
+    }
+
+    .button-container{
+      margin:0 auto;
+      display: table;
+      top: 50%;
+      position: relative;
+      transform: translateY(-50%);
+      .edit{
+        margin-right:10px;
+      }
+    }
+
+  }
+}

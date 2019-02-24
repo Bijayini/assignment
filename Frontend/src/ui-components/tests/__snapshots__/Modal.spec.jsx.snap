@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should match with snapshot 1`] = `
+"<Portal containerInfo={{...}}>
+  <div className=\\"pop-over-wrapper\\" onClick={[Function]} role=\\"alertdialog\\">
+    <div className=\\"pop-over\\">
+      <a href=\\"#\\" className=\\"close-icon\\" onClick={[Function: mockConstructor]}>
+        ×
+      </a>
+      <div className=\\"some-name\\">
+        Some text
+      </div>
+      <div className=\\"button-wrapper\\">
+        <Button type=\\"button\\" onClick={[Function: mockConstructor]} variant=\\"primary\\" size=\\"medium\\" styles=\\"\\">
+          Some Button
+        </Button>
+        <Button type=\\"button\\" onClick={[Function: mockConstructor]} variant=\\"secondary\\" size=\\"medium\\" styles=\\"margin-left:10px\\">
+          cancel
+        </Button>
+      </div>
+    </div>
+  </div>
+</Portal>"
+`;

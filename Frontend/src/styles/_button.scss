@@ -1,0 +1,34 @@
+.button {
+  font-size: 1.125rem;
+  border-radius: 5px;
+  text-align: center;
+  border: 0;
+  &.primary{
+    background-color: $primary-color;
+    color: $text-color;
+    border: 1px solid $primary-color;
+  }
+  &.secondary{
+    background-color: white;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+  }
+  &.large{
+    width: 300px;
+    height: 42px;
+    display: block;
+    margin: 0 auto;
+  }
+  &.small{
+    font-size: calc(1rem * 14 / 16);
+    padding: 6px 18px;
+  }
+  &.medium{
+    font-size: 1.125rem;
+    width: 125px;
+    padding: 10px 5px;
+    @media screen and (min-width: $breakpoints-tablet)  {
+      width: 175px;
+    }
+  }
+}

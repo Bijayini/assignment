@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should match with snapshot 1`] = `
+"<button type=\\"button\\" onClick={[Function: mockConstructor]} className=\\"button small secondary\\">
+   Hello 
+</button>"
+`;

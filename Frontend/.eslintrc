@@ -1,0 +1,61 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "src/**/*.{js,jsx}"
+      ],
+      "excludedFiles": [
+        "src/components/**/*.{js,jsx}"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": 0
+      }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.babel.js"
+      }
+    }
+  },
+  "rules": {
+    "strict": 1,
+    "import/no-extraneous-dependencies": 0,
+    "react/prefer-stateless-function": 2,
+    "no-alert": 0,
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        "svg": "always",
+        "png": "always",
+        "ttf": "always",
+        "json": "always"
+      }
+    ],
+    "prettier/prettier": "warn"
+  },
+  "globals": {
+    "document": true,
+    "describe":true,
+    "it":true
+  },
+  "env": {
+    "es6": true
+  }
+}
+

@@ -1,0 +1,44 @@
+html,
+body,
+ul,
+ol {
+  margin:  0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight:400;
+}
+
+html, * {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4,h5, h6{
+  margin:0;
+  font-weight:700;
+}
+
+h1{
+  font-size:22px;
+}
+
+h3{
+  font-size:18px;
+}
+
+a{
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+
+.wrap{
+  @media screen and (min-width: $breakpoints-desktop) {
+    max-width: $max_width;
+    margin: 0 auto;
+  }
+}

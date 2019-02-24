@@ -1,0 +1,38 @@
+.pop-over-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $popover-background;
+  z-index: 999999;
+  padding: 0 20px;
+}
+.pop-over {
+  background:white;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 2px 7px 0 $popover-shadow;
+  text-align: center;
+  padding: 24px 30px;
+  width: 100%;
+  @media screen and (min-width: $breakpoints-tablet) {
+    padding: 30px 60px;
+    width: auto;
+  }
+  @media screen and (min-width: $breakpoints-desktop) {
+    padding: 30px 90px;
+  }
+}
+.close-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  @media screen and (min-width: $breakpoints-desktop) {
+    right: 20px;
+    top: 20px;
+  }
+}
