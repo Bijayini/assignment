@@ -19,6 +19,7 @@ module.exports = {
   ],
   coveragePathIgnorePatterns: [
     './src/constants',
-    './src/utils'
+    './src/utils',
+    './src/labels'
   ],
 };

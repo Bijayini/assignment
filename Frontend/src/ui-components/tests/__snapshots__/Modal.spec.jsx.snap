@@ -11,10 +11,10 @@ exports[`Modal should match with snapshot 1`] = `
         Some text
       </div>
       <div className=\\"button-wrapper\\">
-        <Button type=\\"button\\" onClick={[Function: mockConstructor]} variant=\\"primary\\" size=\\"medium\\" styles=\\"\\">
+        <Button type=\\"button\\" onClick={[Function: mockConstructor]} variant=\\"primary\\" size=\\"medium\\" classList=\\"left-button\\">
           Some Button
         </Button>
-        <Button type=\\"button\\" onClick={[Function: mockConstructor]} variant=\\"secondary\\" size=\\"medium\\" styles=\\"margin-left:10px\\">
+        <Button type=\\"button\\" onClick={[Function: mockConstructor]} variant=\\"secondary\\" size=\\"medium\\" classList=\\"\\">
           cancel
         </Button>
       </div>

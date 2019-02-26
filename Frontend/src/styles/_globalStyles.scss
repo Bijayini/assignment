@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 html,
 body,
 ul,
@@ -41,4 +43,23 @@ ol {
     max-width: $max_width;
     margin: 0 auto;
   }
+}
+
+label{
+  padding-right: 10px;
+  font-size: 16px;
+  color: $label-color;
+}
+
+input[type="text"], textarea, select{
+  padding: 6px 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  color:$input-color;
+  border: 1px solid $input-border-color;
+}
+
+select{
+  height: 32px;
+  background: white;
 }

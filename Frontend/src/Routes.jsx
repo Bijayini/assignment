@@ -1,15 +1,25 @@
-import React from 'react';
-import {Route, Switch } from 'react-router-dom';
+import React, {Fragment} from 'react';
+import {Route, Switch, withRouter } from 'react-router-dom';
 
-import Home from './components/Home';
-import Todos from './components/Todos';
+import Home from './pages/Home';
+import Todos from './pages/Todos';
+import Error from './pages/Error';
 
+import Header from "./components/Header";
 
-const Routes = () => (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/todos" component={Todos} />
-  </Switch>
-);
+const Routes = (location) => {
+    const {pathname} = location;
 
-export default Routes;
+    return(
+        <Fragment>
+            {pathname !== '/' &&<Header/>}
+            <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route path="/todos" component={Todos} />
+                <Route path="/error" component={Error} />
+            </Switch>
+        </Fragment>
+    );
+};
+
+export default withRouter(Routes);

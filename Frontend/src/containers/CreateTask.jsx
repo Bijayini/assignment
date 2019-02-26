@@ -6,49 +6,56 @@ import Modal from "../ui-components/Modal";
 
 import { fetchTasks } from "../actions";
 
+import labels from '../labels/CreateTask.labels';
+
 
 class CreateTask extends Component{
   static propTypes = {
     toggleOverlay: PropTypes.func.isRequired,
   };
 
-
   constructor(props){
     super(props);
+    this.state = {
+        title:'',
+        description:'',
+        status:'',
+    }
   }
 
   render(){
     const {toggleOverlay} = this.props;
     const buttons = [
       {
-        label: 'cancel',
+        label:labels.cancel,
         type: 'secondary',
         callback:toggleOverlay,
       },
       {
-        label: 'continue',
+        label: labels.continue,
         type: 'primary',
         callback: ()=>{},
       },
     ];
     return(
       <Modal toggleOverlay={toggleOverlay} buttons={buttons}>
-        <h2>Create a Task</h2>
+        <h3 className="modal-title">{labels.create_a_task}</h3>
         <form>
           <div className="form-field">
-            <label htmlFor="title">Title</label>
-            <input type="text" id="title"/>
+            <label htmlFor="title">{labels.title}</label>
+            <input type="text" id="title" />
           </div>
           <div className="form-field">
-            <label htmlFor="description">Description</label>
+            <label htmlFor="description">{labels.description}</label>
             <textarea id="description" />
           </div>
           <div className="form-field">
-            <label htmlFor="status">Status</label>
+            <label htmlFor="status">{labels.status}</label>
             <select>
-              <option value="in progress">In Progress</option>
-              <option value="completed">Completed</option>
-              <option value="urgent">Urgent</option>
+              <option value="">{labels.select_status}</option>
+              <option value="in progress">{labels.in_progress}</option>
+              <option value="completed">{labels.completed}</option>
+              <option value="urgent">{labels.urgent}</option>
             </select>
           </div>
         </form>

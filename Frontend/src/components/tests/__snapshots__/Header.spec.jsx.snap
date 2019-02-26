@@ -2,11 +2,13 @@
 
 exports[`Header should match with snapshot 1`] = `
 "<header className=\\"header\\">
-  <h1>
-    ToDo List
-  </h1>
-  <div tabIndex={0} onClick={[Function]} className=\\"add-task\\">
-    +
+  <div className=\\"header-content wrap\\">
+    <Link className=\\"brand\\" to=\\"/\\" replace={false}>
+      Todo List
+    </Link>
+    <Button variant=\\"secondary\\" size=\\"small\\" onClick={[Function]} type=\\"button\\" classList=\\"\\">
+      Create Task
+    </Button>
   </div>
 </header>"
 `;

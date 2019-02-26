@@ -35,6 +35,7 @@
 
       .heading{
         text-transform: capitalize;
+        color:$list-color
       }
 
       .status{
@@ -62,6 +63,7 @@
       font-size: 14px;
       line-height: 1.3;
       margin: 10px 0 0;
+      color:$list-color;
     }
 
     .hover-effect{
@@ -92,5 +94,33 @@
       }
     }
 
+  }
+}
+
+.modal-title{
+  width: auto;
+  display: table;
+  color:$primary-color;
+  margin: 0 auto 20px;
+}
+.form-field{
+  margin-bottom: 6px;
+  @media screen and (min-width: $breakpoints-tablet) {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  label {
+    display: block;
+    padding-bottom: 6px;
+    text-align: left;
+    @media screen and (min-width: $breakpoints-tablet) {
+      width:30%;
+    }
+  }
+  input[type="text"], textarea, select {
+    width: 100%;
+    @media screen and (min-width: $breakpoints-tablet) {
+      width: 70%;
+    }
   }
 }

@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import {withRouter} from "react-router-dom";
 
-import { fetchTasks } from "../actions";
+import {deleteTask, fetchTasks} from "../actions";
+
+import Error from "../pages/Error";
 
 import Loader from "../ui-components/Loader";
 import Button from "../ui-components/Button";
+
+import labels from "../labels/TodoList.labels";
 
 class TodoList extends Component{
   constructor(props){
@@ -16,9 +21,10 @@ class TodoList extends Component{
   }
 
   render(){
-    const {tasks,error, loading} = this.props;
+    const {tasks,error, loading, history:{push}, deleteTask} = this.props;
     if (error) {
-      return <div>Error! {error.message}</div>;
+        push('/error');
+        return <Error message={error}/>
     }
 
     if (loading) {
@@ -28,8 +34,8 @@ class TodoList extends Component{
     return(
       <div className="main-content">
         <ul className="list-wrap wrap">
-          {tasks.length && tasks.map(task =>{
-            return (<li key={task.id} className="list">
+          {tasks.length ? tasks.map(task =>{
+            return (<li key={task._id} className="list">
               <div className="list-header">
                 <h3 className="heading">{task.title}</h3>
                 <span className={`status ${task.status}`}>{task.status}</span>
@@ -37,12 +43,13 @@ class TodoList extends Component{
               <p className="description">{task.description}</p>
               <div className="hover-effect">
                 <div className="button-container">
-                  <Button variant="primary" size="small" onClick={()=>{}} classList="edit">Edit</Button>
-                  <Button variant="primary" size="small" onClick={()=>{}}>Delete</Button>
+                  <Button variant="primary" size="small" onClick={()=>{}} classList="edit">{labels.edit}</Button>
+                  <Button variant="primary" size="small" onClick={()=>{deleteTask(task._id)}}>{labels.delete}</Button>
                 </div>
               </div>
             </li>)
-          })}
+          }):
+          <p>No task found</p>}
         </ul>
       </div>
     );
@@ -50,7 +57,7 @@ class TodoList extends Component{
 }
 
 const mapStateToProps = state => ({
-  tasks: state.tasks.tasks,
+  tasks: state.tasks && state.tasks.tasks || [],
   loading: state.tasks.loading,
   error: state.tasks.error,
 });
@@ -60,9 +67,12 @@ const mapDispatchToProps = dispatch => {
     fetchTasks: () => {
       dispatch(fetchTasks());
     },
+    deleteTask: (id) => {
+      dispatch(deleteTask(id));
+    },
   };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(
-  TodoList,
+  withRouter(TodoList)
 );

@@ -70,7 +70,7 @@ class Modal extends Component {
                 key={button.type}
                 variant={button.type}
                 size={buttons.length === 2 ? 'medium' : 'large'}
-                styles={index === 1 ? 'margin-left:10px' : ''}
+                classList={index === 0 ? 'left-button' : ''}
               >
                 {button.label}
               </Button>

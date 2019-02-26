@@ -26,13 +26,23 @@
   @media screen and (min-width: $breakpoints-desktop) {
     padding: 30px 90px;
   }
+  .left-button{
+    margin-right: 10px;
+  }
 }
 .close-icon {
   position: absolute;
   right: 15px;
   top: 15px;
+  font-size: 32px;
+  line-height: 1;
+  color:$close-icon;
   @media screen and (min-width: $breakpoints-desktop) {
     right: 20px;
     top: 20px;
   }
+}
+
+.button-wrapper{
+  margin-top:20px;
 }
