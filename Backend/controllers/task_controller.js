@@ -34,7 +34,7 @@ exports.task_create = function (req, res) {
 };
 
 exports.task_update = function (req, res) {
-    Task.findOneAndUpdate(req.params.id, {$set:req.body}, (err)=>{
+    Task.findByIdAndUpdate(req.params.id, {$set:req.body}, (err)=>{
         if(err){
           console.error(err);
         }
@@ -43,9 +43,11 @@ exports.task_update = function (req, res) {
 };
 
 exports.task_delete = function (req, res) {
-    Task.findOneAndDelete(req.params.id, (err)=>{
+    console.info('Request for deleting task id:', req.params.id);
+
+    Task.findByIdAndDelete(req.params.id, (err)=>{
         if(err){
-            console.error(err);
+            console.error('Deletion failed for ', req.params.id,' with error ', err);
         }
         res.send('Task is successfully deleted');
     })
