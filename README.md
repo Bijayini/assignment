@@ -34,7 +34,7 @@
  yarn install
  yarn start
  
- and go to http://localhost:9008
+ Go to http://localhost:9008
 ```
 
 ##### Start the Frontend
@@ -45,12 +45,12 @@
  yarn install
  yarn start
  
-  and go to http://localhost:8080
+ Go to http://localhost:8080
 ```
     
 
 ### Run Tests
-Run tests from command line with (in the frontend and backend both directory):
+Run tests from command line with (in the frontend and backend both directory)
 ```
 $ yarn test
 ``` 
