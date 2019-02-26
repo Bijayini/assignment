@@ -15,7 +15,7 @@
 **Technologies used for Backend**:
 * Express
 
-**Features**:
+
 ### Install
 * Install node latest version
     https://nodejs.org/en/download/
@@ -49,8 +49,8 @@
 ```
     
 
-### Run Tests (...always run tests)
-Run tests from command line with (in the frontend directory):
+### Run Tests
+Run tests from command line with (in the frontend and backend both directory):
 ```
 $ yarn test
 ``` 
