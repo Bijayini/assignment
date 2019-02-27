@@ -12,14 +12,16 @@ module.exports = {
       lines: 74,
     },
   },
+  moduleNameMapper: { "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js", "\\.(css|scss)$": "<rootDir>/assetsTransformer.js"},
   testPathIgnorePatterns: [
     './setupEnzyme.js',
     'coverage',
     './node_modules/',
+    './src/styles/'
   ],
   coveragePathIgnorePatterns: [
     './src/constants',
-    './src/utils',
-    './src/labels'
+    './src/labels',
+    './src/styles/'
   ],
 };

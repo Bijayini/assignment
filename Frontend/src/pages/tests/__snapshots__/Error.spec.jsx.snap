@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Error /> should match with snapshot 1`] = `
+"<div className=\\"wrap error-page\\">
+  <h1 className=\\"error-title\\">
+    Something Went Wrong !!
+  </h1>
+  <p>
+    Please join us after sometime
+  </p>
+</div>"
+`;

@@ -5,7 +5,7 @@ import labels from "../labels/Error.labels";
 import '../styles/error.scss';
 
 const Error = ({message}) => {
-    return <div className="wrap error-message">
+    return <div className="wrap error-page">
         <h1 className="error-title">{message}</h1>
         <p>{labels.message}</p>
     </div>;

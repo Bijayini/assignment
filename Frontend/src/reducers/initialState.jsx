@@ -1,6 +1,6 @@
 const initialState = {
     tasks: [],
     loading: false,
-    error: null
+    error: null,
 };
 export default initialState;

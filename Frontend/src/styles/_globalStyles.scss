@@ -58,8 +58,19 @@ input[type="text"], textarea, select{
   color:$input-color;
   border: 1px solid $input-border-color;
 }
+textarea{
+  resize: none;
+  overflow-y: auto;
+  height:150px;
+}
 
 select{
   height: 32px;
   background: white;
+}
+.error-message{
+  color: $error_message;
+}
+.main-layout-header{
+  margin-top:51px;
 }

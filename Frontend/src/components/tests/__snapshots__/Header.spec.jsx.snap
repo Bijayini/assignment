@@ -6,7 +6,7 @@ exports[`Header should match with snapshot 1`] = `
     <Link className=\\"brand\\" to=\\"/\\" replace={false}>
       Todo List
     </Link>
-    <Button variant=\\"secondary\\" size=\\"small\\" onClick={[Function]} type=\\"button\\" classList=\\"\\">
+    <Button variant=\\"secondary\\" size=\\"small\\" onClick={[Function]} classList=\\"create-task\\" type=\\"button\\">
       Create Task
     </Button>
   </div>

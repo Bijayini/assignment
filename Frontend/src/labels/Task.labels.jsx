@@ -1,0 +1,20 @@
+const labels = {
+    cancel:'Cancel',
+    continue:'Continue',
+    create_a_task: 'Create A Task',
+    create_task: 'Create Task',
+    edit_a_task: 'Edit A Task',
+    title:'Title',
+    description:'Description',
+    status:'Status',
+    select_status:'Select Status',
+    in_progress:'In Progress',
+    completed:'Completed',
+    urgent:'Urgent',
+    please_fill_all_required_field:'Please fill all required field',
+    are_you_sure:'Are you sure?',
+    edit:'Edit',
+    delete:'Delete',
+    network_error:'We are facing some technical issue. Please come back later',
+};
+export default labels;

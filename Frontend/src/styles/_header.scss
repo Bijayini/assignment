@@ -4,6 +4,11 @@
   padding: 10px 20px;
   clear: both;
   overflow: hidden;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:99;
   box-shadow: 0 1px 1px 1px $header-shadow;
   .header-content{
     color:$text-color;

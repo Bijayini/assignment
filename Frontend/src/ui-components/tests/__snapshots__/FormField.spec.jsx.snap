@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormField /> should match with snapshot 1`] = `
+"<div className=\\"form-field\\">
+  <label htmlFor=\\"someId\\">
+    some label
+     *
+  </label>
+  <span>
+    Some input
+  </span>
+</div>"
+`;

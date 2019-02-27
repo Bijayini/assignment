@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import {Header} from '../Header';
+import { routePaths } from '../../utils/config';
 
 describe('Header', () => {
   let component;
@@ -10,7 +11,7 @@ describe('Header', () => {
   beforeEach(()=>{
     props = {
         location:{
-          pathname:'/todos'
+          pathname:routePaths.TASKS
         }
     };
     component = shallow(<Header {...props}/>);
