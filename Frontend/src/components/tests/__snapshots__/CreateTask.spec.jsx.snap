@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateTask should match with snapshot 1`] = `
+"<Modal toggleOverlay={[Function: mockConstructor]} buttons={{...}}>
+  <h3 className=\\"modal-title\\">
+    Create A Task
+  </h3>
+  <TaskForm title=\\"\\" description=\\"\\" status=\\"\\" handleChange={[Function]} hasError={false} />
+</Modal>"
+`;

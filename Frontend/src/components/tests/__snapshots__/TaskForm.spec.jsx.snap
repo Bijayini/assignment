@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TaskForm /> should match with snapshot 1`] = `
+"<Fragment>
+  <FormField label=\\"Title\\" labelFor=\\"some title\\">
+    <input type=\\"text\\" id=\\"title\\" name=\\"title\\" value=\\"some title\\" onChange={[Function: mockConstructor]} />
+  </FormField>
+  <FormField label=\\"Description\\" labelFor=\\"some desc\\">
+    <textarea id=\\"description\\" name=\\"description\\" value=\\"some desc\\" onChange={[Function: mockConstructor]} />
+  </FormField>
+  <FormField label=\\"Status\\" labelFor=\\"some value\\">
+    <select value=\\"some value\\" name=\\"status\\" onChange={[Function: mockConstructor]}>
+      <option value=\\"\\">
+        Select Status
+      </option>
+      <option value=\\"in progress\\">
+        In Progress
+      </option>
+      <option value=\\"completed\\">
+        Completed
+      </option>
+      <option value=\\"urgent\\">
+        Urgent
+      </option>
+    </select>
+  </FormField>
+  <p className=\\"error-message\\">
+    Please fill all required field
+  </p>
+</Fragment>"
+`;

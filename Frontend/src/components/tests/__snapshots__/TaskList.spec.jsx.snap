@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskList should match with snapshot 1`] = `
+"<div className=\\"main-content\\">
+  <ul className=\\"list-wrap wrap\\">
+    <li className=\\"list\\">
+      <div className=\\"list-header\\">
+        <h3 className=\\"heading\\">
+          some title
+        </h3>
+        <span className=\\"status some value\\">
+          some value
+        </span>
+      </div>
+      <p className=\\"description\\">
+        some desc
+      </p>
+      <div className=\\"hover-effect\\">
+        <div className=\\"button-container\\">
+          <EditTask editTask={[Function: mockConstructor]} task={{...}} />
+          <DeleteTask handelClick={[Function: mockConstructor]} id=\\"23\\" />
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;

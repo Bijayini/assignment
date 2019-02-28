@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteTask should match with snapshot 1`] = `
+"<Fragment>
+  <Button variant=\\"primary\\" size=\\"small\\" onClick={[Function]} type=\\"button\\" classList=\\"\\">
+    Delete
+  </Button>
+</Fragment>"
+`;

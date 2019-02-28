@@ -6,10 +6,10 @@ module.exports = {
   coverageReporters: ['json', 'lcov', 'text-summary'],
   coverageThreshold: {
     global: {
-      statements: 73,
-      branches: 51,
-      functions: 62,
-      lines: 74,
+      statements: 54,
+      branches: 48,
+      functions: 44,
+      lines: 56,
     },
   },
   moduleNameMapper: { "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js", "\\.(css|scss)$": "<rootDir>/assetsTransformer.js"},
