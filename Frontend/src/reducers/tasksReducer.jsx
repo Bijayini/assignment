@@ -10,13 +10,13 @@ import {editArrayOfObject} from "./helper";
 function tasksReducer(state = initialState, action) {
   switch (action.type){
     case FETCH_TASKS_BEGIN:
-      return { ...state, loading: true};
+      return { ...state, loading: true,shouldRefresh:false};
 
     case FETCH_TASKS_FAILURE:
-      return { ...state, loading: false, error:action.payload.error};
+      return { ...state, loading: false, error:action.payload.error, shouldRefresh:false};
 
     case FETCH_TASKS_SUCCESS:
-      return { ...state, loading: false, tasks: action.payload.tasks };
+      return { ...state, loading: false, tasks: action.payload.tasks, shouldRefresh:false };
 
       case DELETE_TASK_BEGIN:
           return { ...state, loading: true};
@@ -35,7 +35,7 @@ function tasksReducer(state = initialState, action) {
           return { ...state, loading: false, error:action.payload.error};
 
       case CREATE_TASK_SUCCESS:
-          return { ...state, loading: false};
+          return { ...state, loading: false, shouldRefresh:true};
 
       case EDIT_TASK_BEGIN:
           return { ...state, loading: true};

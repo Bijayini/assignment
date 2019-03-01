@@ -8,6 +8,7 @@ const mapStateToProps = state => ({
     tasks: state.tasks && state.tasks.tasks || [],
     loading: state.tasks.loading,
     error: state.tasks.error,
+    shouldRefresh:state.tasks.shouldRefresh
 });
 
 const mapDispatchToProps = dispatch => ({

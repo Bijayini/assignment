@@ -15,6 +15,13 @@ class TaskList extends Component{
     this.props.fetchTasks();
   }
 
+  componentDidUpdate(prevProps){
+    const {shouldRefresh} = this.props;
+    if(shouldRefresh){
+      this.props.fetchTasks();
+    }
+  }
+
   render(){
     const {tasks,error, loading, deleteTask, editTask} = this.props;
     if (error) {
